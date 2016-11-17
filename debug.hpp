@@ -1,5 +1,5 @@
-/* @file debug $B%G%P%C%0$N$?$a$N%f!<%F%#%j%F%#%^%/%m72!%(B
- *  #define DEBUG$B$^$?$O(B#define ISDEBUG 1$B$N;~$N$_F0:n$9$k(B
+/* @file debug デバッグのためのユーティリティマクロ群．
+ *  #define DEBUGまたは#define ISDEBUG 1の時のみ動作する
  */
 
 #ifndef DEBUG_HPP_
@@ -16,14 +16,14 @@
 #endif
 #endif
 
-/* @macro HERE $B<+$i$N=j:_CO$r=PNO$9$kDj?t%^%/%m(B
+/* @macro HERE 自らの所在地を出力する定数マクロ
  */
 #ifdef HERE
 #undef HERE
 #endif
 #define HERE BOOST_PP_EXPR_IIF(ISDEBUG, { std::cerr << "DEBUG: here is line " << __LINE__ << " in " << __FILE__ << std::endl; })
 
-/* @macro PRINT(var) $BJQ?t$NCf?H$r=PNO$9$k4X?t%^%/%m(B
+/* @macro PRINT(var) 変数の中身を出力する関数マクロ
  */
 #ifdef PRINT
 #undef PRINT
