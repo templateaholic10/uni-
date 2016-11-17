@@ -1,4 +1,4 @@
-/* @file array_io std::arrai I/O
+/* @file array_io std::array I/O．iostreamに対応
  */
 
 #ifndef ARRAY_IO_HPP_
